@@ -224,14 +224,14 @@ Plugin development is facilitated by a helper package in the following programmi
 The output plugin is an executable program whose name must (for security reasons) begin with the string `xk6-output-plugin-`. This is followed by the actual name of the plugin, which can be used to refer to it. The reference can of course also contain the full name with the prefix `xk6-output-plugin-`. The two reference below specify the same plugin:
 
 ```bash
-./k6 run --out=example script.js
-./k6 run --out=xk6-output-plugin-example script.js
+./k6 run --out=plugin=example script.js
+./k6 run --out=plugin=xk6-output-plugin-example script.js
 ```
 
 The plugin is run by taking the `PATH` environment variable into account, unless the reference also contains a path. The reference below runs the file named `xk6-output-plugin-example` from the `plugins` directory in the current directory:
 
 ```bash
-./k6 run --out=./plugins/example script.js
+./k6 run --out=plugin=./plugins/example script.js
 ```
 
 ## Configuration
@@ -246,4 +246,43 @@ The output plugin can also be configured with environment variables. The environ
 
 ```bash
 ./k6 run -e var=value --out=plugin=example script.js
+```
+
+## Download
+
+You can download pre-built k6 binaries from [Releases](https://github.com/szkiba/xk6-output-plugin/releases/) page. Check [Packages](https://github.com/szkiba/xk6-output-plugin/pkgs/container/xk6-output-plugin) page for pre-built k6 Docker images.
+
+## Build
+
+To build a `k6` binary with this extension, first ensure you have the prerequisites:
+
+- [Go toolchain](https://go101.org/article/go-toolchain.html)
+- Git
+
+Then:
+
+1. Download `xk6`:
+  ```bash
+  $ go install go.k6.io/xk6/cmd/xk6@latest
+  ```
+
+2. Build the binary:
+  ```bash
+  $ xk6 build --with github.com/szkiba/xk6-output-plugin@latest
+  ```
+
+## Docker
+
+You can also use pre-built k6 image within a Docker container. In order to do that, you will need to execute something like the following:
+
+**Linux**
+
+```plain
+docker run -v $(pwd):/scripts -it --rm ghcr.io/szkiba/xk6-output-plugin:latest run --out=plugin=XXX /scripts/script.js
+```
+
+**Windows**
+
+```plain
+docker run -v %cd%:/scripts -it --rm ghcr.io/szkiba/xk6-output-plugin:latest run --out=plugin=XXX /scripts/script.js
 ```
