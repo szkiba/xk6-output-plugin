@@ -41,7 +41,7 @@ func Build() error {
 }
 
 func Example() error {
-	return shellcmd.Command(`go build -ldflags="-s -w" -o xk6-output-plugin-example ./examples/example-go`).Run()
+	return shellcmd.Command(`go build -ldflags="-s -w" -o ./examples/example-go/xk6-output-plugin-example ./examples/example-go`).Run()
 }
 
 func Coverage() error {
