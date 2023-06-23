@@ -1,0 +1,11 @@
+{
+  "name": "xk6-output-plugin-example-js",
+  "version": "0.1.0",
+  "description": "xk6-output-plugin JavaScript example",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "xk6-output-plugin-js": "^0.1.0"
+  }
+}
