@@ -130,12 +130,14 @@ func (ext *Extension) flush() {
 		}
 	}
 
-	err := ext.output.AddMetrics(context.Background(), allMetric)
-	if err != nil {
-		ext.logger.WithError(err).Warn()
+	if len(allMetric) != 0 {
+		err := ext.output.AddMetrics(context.Background(), allMetric)
+		if err != nil {
+			ext.logger.WithError(err).Warn()
+		}
 	}
 
-	err = ext.output.AddSamples(context.Background(), allSample)
+	err := ext.output.AddSamples(context.Background(), allSample)
 	if err != nil {
 		ext.logger.WithError(err).Warn()
 	}
