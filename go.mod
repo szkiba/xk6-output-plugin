@@ -7,7 +7,7 @@ require (
 	github.com/hashicorp/go-hclog v1.5.0
 	github.com/hashicorp/go-plugin v1.4.10
 	github.com/sirupsen/logrus v1.9.3
-	github.com/szkiba/xk6-output-plugin-go v0.0.0-20230620122929-6efcc0cce2c2
+	github.com/szkiba/xk6-output-plugin-go v0.1.0
 	go.k6.io/k6 v0.44.1
 )
 

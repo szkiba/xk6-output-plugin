@@ -53,8 +53,8 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.7.2/go.mod h1:R6va5+xMeoiuVRoj+gSkQ7d3FALtqAAGI1FQKckRals=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
-github.com/szkiba/xk6-output-plugin-go v0.0.0-20230620122929-6efcc0cce2c2 h1:Jjv/A5Z2f36btItmGrgVmTEOAMsbWBKcQWD5xNKDXrs=
-github.com/szkiba/xk6-output-plugin-go v0.0.0-20230620122929-6efcc0cce2c2/go.mod h1:4zu6ZsHlDp8H1V0QDiaV4vNC94uh8wZOw+BxsCgFN1Q=
+github.com/szkiba/xk6-output-plugin-go v0.1.0 h1:F6trl3YL/mBPLGbLoNA5VqjkfZXcDfSIDDk0l4URYCQ=
+github.com/szkiba/xk6-output-plugin-go v0.1.0/go.mod h1:4zu6ZsHlDp8H1V0QDiaV4vNC94uh8wZOw+BxsCgFN1Q=
 go.k6.io/k6 v0.44.1 h1:6PHo1u+UdwGhM9dT2F4chCGT7Ac3h4YJ96nDIhfJEHk=
 go.k6.io/k6 v0.44.1/go.mod h1:4D2BnugW3gBWyI+yuKp18f+rFPkZIWBpxNe6Xe6MvGE=
 golang.org/x/crypto v0.6.0 h1:qfktjS5LUO+fFKeJXZ+ikTRijMmljikvG68fpMMruSc=
